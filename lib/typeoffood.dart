@@ -8,8 +8,16 @@ const Dummy_Category = const [
     title: 'Punjabi',
     color: Colors.purple,
   ),
-  CategoryType(id: 'c2', title: 'southIndian', color: Colors.green),
-  CategoryType(id: 'c3', title: 'Western Indian ', color: Colors.yellow),
+  CategoryType(
+    id: 'c2',
+    title: 'southIndian',
+    color: Colors.green,
+  ),
+  CategoryType(
+    id: 'c3',
+    title: 'Western Indian ',
+    color: Colors.yellow,
+  ),
   CategoryType(
     id: 'c4',
     title: 'italian',

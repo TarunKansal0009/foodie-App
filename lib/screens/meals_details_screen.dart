@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meals_detail';
+  final Function toogleScreen;
+  final Function isFavorite;
+  MealDetailScreen(this.toogleScreen, this.isFavorite);
   Widget buildselectionTitle(BuildContext context, String title) {
     return Container(
       margin: EdgeInsets.all(10),
@@ -31,6 +34,12 @@ class MealDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(selectedMeal.title),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          isFavorite(mealId) ? Icons.star : Icons.star_border,
+        ),
+        onPressed: () => toogleScreen(mealId),
       ),
       body: SingleChildScrollView(
         child: Column(
